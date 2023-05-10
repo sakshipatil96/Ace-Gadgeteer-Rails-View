@@ -1,0 +1,54 @@
+<div class= "container">
+  <% @specifications.each do |specification| %>
+    <div class="card mb-3 shadow p-3 rounded" style="max-width: 90%;">
+      <div class="row no-gutters">
+        <div class="col-md-2">
+          <% valid_image = @index_images.find do |file|%>
+            <% file_name = File.basename(file)%>
+            <% file_name = file_name.slice(0..(file_name.index(".") - 1)).downcase%>
+            <% phone_name = specification.phone_name.downcase%>
+            <% file_name == phone_name %>
+          <% end %>
+          <%= image_tag "index_images/one_plus/#{File.basename(valid_image)}", class:"card-img" if valid_image %>
+        </div>
+        <div class= "col">
+          <div class="card-body">
+            <h5>
+              <span class="badge badge-dark-index">Model Name: </span>
+              <span class="index-card-body font-index">
+                &nbsp<%= specification.phone_name%>
+              </span><br>
+            </h5>
+            <h5>
+              <span class="badge badge-dark-index">Launch Date:</span>
+              <span class="index-card-body font-index">
+                &nbsp<%= specification.launch_date %>
+              </span><br>
+            </h5>
+            <h5>
+              <span class="badge badge-dark-index">Variants:</span>
+              <span class="index-card-body font-index">
+                &nbsp<%= specification.variants %>
+              </span><br>
+            </h5>
+            <% if specification.rating %>
+              <h5>
+                <span class="badge badge-dark-index">Rating:</span>
+                <% specification.rating.times do  %>
+                  <span class="fa fa-star"></span>
+                <% end %><br>
+              </h5>
+            <% end %>
+            <div class= "center text-muted">
+              <small>Created: <%= time_ago_in_words specification.created_at %> ago</small>
+            </div>
+            <div class= "center">
+              <%= button_to 'Click for Detailed Review', polymorphic_path(specification), class: "btn btn-dark" %>
+            </div>
+            <%= link_to '', polymorphic_path(specification), class: "stretched-link"%>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,29 @@
+<h1> SignUp Form </h1>
+<% if @user.errors.any? %>
+  <h2>The following errors prevented the article from being saved</h2>
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+<br>
+<br>
+
+<div class= "container">
+    <div class="form-group card p-1">
+      <%= form_for @user do |f| %>
+        <%= f.label 'User Name'%><br>
+        <%= f.text_field :username, class: "form-control"%><br>
+        <br>
+        <%= f.label 'Email Address'%><br>
+        <%= f.text_field :email, class: "form-control"%><br>
+        <br>
+        <%= f.label 'Password'%><br>
+        <%= f.password_field :password, class: "form-control"%><br>
+        <br>
+        <%= f.submit "Submit Article", class: "btn btn-primary"%>
+        <br>
+      <% end %>
+    </div>
+</div>

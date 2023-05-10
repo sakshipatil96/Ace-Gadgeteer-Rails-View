@@ -1,0 +1,18 @@
+<br>
+<h1><strong><u>Showing article details</u></strong></h1>
+<br>
+<div class= "container">
+    <div class="card bg-light mb-3" style="max-width: 20rem;" >
+        <div class="card-header text-white bg-dark mb-3">Title: <%= @article.title %></div>
+        <div class="card-body">
+            <p class="card-text">Description: <%= @article.description%></p>
+            <%= link_to 'Edit', edit_article_path(@article) %> |
+            <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %> |
+            <%= link_to 'Return to articles listing', articles_path %>
+        </div>
+    </div>
+</div>
+
+
+
+ 

@@ -1,0 +1,45 @@
+<div class=" container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active">Home</li>
+    </ol>
+  </nav>
+</div>
+
+<div class= "container">
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="col mb-4">
+      <div class="card">
+        <%= image_tag "one-plus-logo.png", class: "card-img-top" %>
+        <div class="card-body">
+          <h4 class="card-title"><span class="badge badge-dark">The "Flagship-Killer"</span></h4>
+          <p class="card-text">OnePlus has come a long way with the quality of the product, design, performance in a very short span of time. It gives the features of a Flagship in mid-range category which has attracted users the most. </p>
+          <%= button_to 'Explore OnePlus Product Reviews', one_plus_path, class: "btn btn-dark" %>
+          <%= link_to '', one_plus_path, class: "stretched-link"%>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card">
+        <%= image_tag "apple-logo.png", class: "card-img-top" %>
+        <div class="card-body">
+          <h4 class="card-title"><span class="badge badge-dark">Simplicity with Excellence</span></h4>
+          <p class="card-text">The smartphones designed by Apple have long occupied a strong position in the mobile market. Quality along with Excellence makes the product quite Outstanding.</p>
+          <%= button_to 'Explore Apple Product Reviews', apple_index_path, class: "btn btn-dark" %>
+          <%= link_to '', apple_index_path, class: "stretched-link"%>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card">
+        <%= image_tag "samsung-logo.png", class: "card-img-top", style: "padding: 10px" %>
+        <div class="card-body">
+          <h4 class="card-title"><span class="badge badge-dark">"Best" in class</span></h4>
+          <p class="card-text">Being the largest Manufacturers of Android, Samsung releases a varierty of product every year, which covers all the price segment from low to medium to higher priced smartphones.</p>
+          <%= button_to 'Explore Samsung Product Reviews', samsung_index_path, class: "btn btn-dark" %>
+          <%= link_to '', samsung_index_path, class: "stretched-link"%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

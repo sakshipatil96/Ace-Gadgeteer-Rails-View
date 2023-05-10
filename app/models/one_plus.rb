@@ -1,0 +1,3 @@
+class OnePlus < Specification
+
+end    

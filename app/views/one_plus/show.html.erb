@@ -1,0 +1,18 @@
+<%# breadcrumb %>
+<div class=" container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><%= link_to 'Home', root_path%></li>
+      <li class="breadcrumb-item"><%= link_to 'One Plus', one_plus_path%></li>
+      <li class="breadcrumb-item active"><%= @specification.phone_name %></li>
+    </ol>
+  </nav>
+</div>
+
+<%# main review %>
+<div class= "container">
+  <%= render 'shared/show_template/review_box' %>
+  <%= render 'shared/show_template/specification_table' %>
+</div>
+
+

@@ -1,0 +1,61 @@
+<% if @specification.errors.any? %>
+  <h2>The following errors prevented the article from being saved</h2>
+  <ul>
+    <% @article.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+<br>
+<br>
+
+<div class= "container">
+    <div class="form-group card p-1">
+      <%= form_for @specification do |f| %>
+        <%= f.label 'Model Name'%><br>
+        <%= f.text_field :phone_name, class: "form-control"%><br>
+        <br>
+
+        <div class="form-group">
+          <%= f.label 'Brand'%><br>
+          <%= f.select :brand_name, ['One Plus', 'Apple', 'Samsung'], class: "form-control"%>
+        </div>
+        <%= f.label 'variants'%><br>
+        <%= f.text_area :variants, class: "form-control"%><br>
+        <%= f.label 'launch_date'%><br>
+        <%= f.text_area :launch_date, class: "form-control"%><br>
+        <%= f.label 'price'%><br>
+        <%= f.text_field :price, class: "form-control"%><br>
+        <%= f.label 'network'%><br>
+        <%= f.text_area :network, class: "form-control"%><br>
+        <%= f.label 'body'%><br>
+        <%= f.text_area :body, class: "form-control"%><br>
+        <%= f.label 'display'%><br>
+        <%= f.text_area :display, class: "form-control"%><br>
+        <%= f.label 'os'%><br>
+        <%= f.text_field :os, class: "form-control"%><br>
+        <%= f.label 'processor'%><br>
+        <%= f.text_area :processor, class: "form-control"%><br>
+        <%= f.label 'memory'%><br>
+        <%= f.text_area :memory, class: "form-control"%><br>
+        <%= f.label 'camera'%><br>
+        <%= f.text_area :camera, class: "form-control"%><br>
+        <%= f.label 'sound'%><br>
+        <%= f.text_area :sound, class: "form-control"%><br>
+        <%= f.label 'security'%><br>
+        <%= f.text_area :security, class: "form-control"%><br>
+        <%= f.label 'connection'%><br>
+        <%= f.text_area :connection, class: "form-control"%><br>
+        <%= f.label 'rating'%><br>
+        <%= f.number_field :rating, class: "form-control"%><br>
+        <%= f.label 'battery'%><br>
+        <%= f.text_area :battery, class: "form-control"%><br>
+
+        <%= f.label 'Article Description'%><br>
+        <%= f.text_area :description, class: "form-control"%><br>
+        
+        <%= f.submit "Submit Article", class: "btn btn-primary"%>
+        <br>
+      <% end %>
+    </div>
+</div>

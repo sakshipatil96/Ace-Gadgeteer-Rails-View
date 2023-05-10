@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card-header text-white bg-dark">
+    <h5>Review</h5>
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+    <div class="review_body">
+      <p><%= @specification.description%></p>
+    </div>
+    <footer class="blockquote-footer">Rating:  
+      <% @specification.rating.times do  %>
+        <span class="fa fa-star"></span>
+      <% end %>
+    </footer>
+    </blockquote>
+    <div class= "center">
+      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">
+        Show Images for <%=@specification.phone_name%>
+      </button>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle"><%= @specification.phone_name%></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <%= render 'shared/show_template/image_carousel' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

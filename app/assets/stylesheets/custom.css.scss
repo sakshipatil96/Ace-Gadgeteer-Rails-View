@@ -1,0 +1,116 @@
+@import "bootstrap";
+@import "font-awesome";
+// .navbar {
+//     // background-color: #a2deec !important;
+//     // height: 45px;
+//     margin-bottom: 60px;
+//   }  
+
+table, th , td{
+  border: 0.5px solid rgb(100, 97, 97);
+}
+
+.specification_table_body{
+  white-space: pre-line;
+  text-align: left;
+}
+    
+.navbar-brand {  
+    font-size: 1.45rem;
+    font-family: "Avenir Next" !important;
+}
+    
+h1 {  
+    color: lightseagreen;
+    text-align: center;
+  }
+
+.btn-primary {
+  color: #fff;
+  border-color: #007bff;
+}
+
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 20px; /* Added */
+}
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.title_logo {
+  border-radius: 5px;
+}
+
+.carousel {
+  padding: 0.5%;
+  width: 100%;
+  height: fit-content !important;
+  margin: 0 auto;
+}
+
+.carousel_inner {
+  background-size: cover;
+  background-position: 50% 50%;
+  width: fit-content;
+  height: fit-content !important;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
+
+.blockquote-footer {
+  font-family: "Avenir Next" !important;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.modal {
+  max-height: 100%;
+}
+
+.center{
+  text-align: center;
+}
+
+.review_body {
+  display: inline;
+  white-space: pre-line; 
+}
+
+.text-muted {
+  font-weight: lighter;
+  font-size: medium;
+}
+
+.index-card-body {
+  text-align-last: left;
+  -webkit-appearance: textarea;
+}
+
+.text-muted {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: larger;
+}
+
+.card-img {
+  display: block;
+  height: fit-content;
+  width: fit-content;
+}
+
+.badge-dark-index {
+  color: #fff;
+  background-color:#98999a;
+}
+
+.font-index {
+  font-family: 'American Typewriter', 'serif';
+  font-size: medium;
+}
